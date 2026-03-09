@@ -89,8 +89,8 @@ pub fn run() {
         .setup(|app| {
             // Set webview background to transparent (needed on Linux)
             if let Some(window) = app.get_webview_window("main") {
-                // Make the window background transparent
-                let _ = window.set_decorations(false);
+                use tauri::window::Color;
+                let _ = window.set_background_color(Some(Color(0, 0, 0, 0)));
             }
 
             let handle = app.handle().clone();

@@ -18,7 +18,8 @@
         "transparent": true,
         "alwaysOnTop": true,
         "skipTaskbar": true,
-        "resizable": false
+        "resizable": false,
+        "backgroundColor": "#00000000"
       }
     ],
     "security": {
