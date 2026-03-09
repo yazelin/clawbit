@@ -4,6 +4,7 @@ mod ipc;
 mod models;
 mod session;
 mod settings;
+mod sound;
 mod state;
 mod stats;
 
