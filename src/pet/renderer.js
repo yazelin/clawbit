@@ -72,7 +72,9 @@ export class PetRenderer {
     const frameIndex = Math.floor(this.animationTime * fps) % sprite.frameCount;
     const sx = frameIndex * sprite.frameWidth;
     const bobOffset = Math.sin(this.animationTime * 1.5 + (session.position_index || 0)) * 3;
-    const scale = 2 * dpr;
+    // Scale sprite to fit nicely in the window (~80px tall)
+    const targetHeight = 80 * dpr;
+    const scale = targetHeight / sprite.frameHeight;
     const drawW = sprite.frameWidth * scale;
     const drawH = sprite.frameHeight * scale;
 

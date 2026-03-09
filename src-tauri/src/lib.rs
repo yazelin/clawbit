@@ -87,6 +87,12 @@ pub fn run() {
         .plugin(tauri_plugin_shell::init())
         .manage(app_state)
         .setup(|app| {
+            // Set webview background to transparent (needed on Linux)
+            if let Some(window) = app.get_webview_window("main") {
+                // Make the window background transparent
+                let _ = window.set_decorations(false);
+            }
+
             let handle = app.handle().clone();
 
             // Start IPC server

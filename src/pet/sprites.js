@@ -8,7 +8,7 @@ export async function loadAllSprites() {
     for (const emotion of EMOTIONS) {
       const key = `${state}_${emotion}`;
       const img = new Image();
-      img.src = `assets/sprites/${key}.jpg`;
+      img.src = `assets/sprites/${key}.png`;
       try {
         await new Promise((resolve, reject) => {
           img.onload = resolve;
