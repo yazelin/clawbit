@@ -4,6 +4,7 @@ mod hooks;
 mod state;
 mod session;
 mod emotion;
+mod settings;
 
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 #[tauri::command]
