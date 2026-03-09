@@ -1,0 +1,3 @@
+[workspace]
+members = ["src-tauri", "clawbit-hook"]
+resolver = "2"
